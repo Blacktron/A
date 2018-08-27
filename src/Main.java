@@ -64,13 +64,24 @@ public class Main {
         //System.out.println("Expected maximum = 15");
 
         // Task 4.7
-        double meters;
-        System.out.println("Enter meters:");
-        Scanner in = new Scanner(System.in);
-        meters = in.nextDouble();
-        Converter converter = new Converter(meters);
-        System.out.println(meters + " meters are " + converter.convertToMiles() + " miles");
-        System.out.println(meters + " meters are " + converter.convertToFeet() + " feet");
-        System.out.println(meters + " meters are " + converter.convertToInches() + " inches");
+        //double meters;
+        //System.out.println("Enter meters:");
+        //Scanner in = new Scanner(System.in);
+        //meters = in.nextDouble();
+        //Converter converter = new Converter(meters);
+        //System.out.println(meters + " meters are " + converter.convertToMiles() + " miles");
+        //System.out.println(meters + " meters are " + converter.convertToFeet() + " feet");
+        //System.out.println(meters + " meters are " + converter.convertToInches() + " inches");
+
+        // Task 4.8
+        //Square square = new Square(15);
+        //System.out.println("Perimeter = " + square.getPerimeter());
+        //System.out.println("Area = " + square.getArea());
+        //System.out.println("Diagonal length = " + square.getDiagonalLength());
+
+        // Task 4.9
+        SodaCan sodaCan = new SodaCan(10, 5);
+        System.out.println("Volume = " + sodaCan.getVolume());
+        System.out.println("Surface area = " + sodaCan.getSurfaceArea());
     }
 }
