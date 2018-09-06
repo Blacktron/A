@@ -8,6 +8,7 @@ public class CashRegister {
 
     private double purchase;
     private double payment;
+    private double change;
     private int items;
 
     /**
@@ -16,6 +17,7 @@ public class CashRegister {
     public CashRegister() {
         this.purchase = 0;
         this.payment = 0;
+        this.change = 0;
         this.items = 0;
     }
 
@@ -46,7 +48,7 @@ public class CashRegister {
      * @return the change due to the customer
      */
     public double giveChange() {
-        double change = payment - purchase;
+        change = payment - purchase;
         purchase = 0;
         payment = 0;
         items = 0;
@@ -100,5 +102,36 @@ public class CashRegister {
      */
     public int getItemCount() {
         return items;
+    }
+
+    public int giveDollars() {
+        int dollars = 0;
+
+        while (change >= 1) {
+            if (change / 100 >= 1) {
+                dollars += 100;
+                change -= 100;
+            } else if (change / 50 >= 1) {
+                dollars += 50;
+                change -= 50;
+            } else if (change / 20 >= 1) {
+                dollars += 20;
+                change -= 20;
+            } else if (change / 10 >= 1) {
+                dollars += 10;
+                change -= 10;
+            } else if (change / 5 >= 1) {
+                dollars += 5;
+                change -= 5;
+            } else if (change / 2 >= 1) {
+                dollars += 2;
+                change -= 2;
+            } else {
+                dollars += 1;
+                change -= 1;
+            }
+        }
+
+        return dollars;
     }
 }

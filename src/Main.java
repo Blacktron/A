@@ -80,8 +80,22 @@ public class Main {
         //System.out.println("Diagonal length = " + square.getDiagonalLength());
 
         // Task 4.9
-        SodaCan sodaCan = new SodaCan(10, 5);
-        System.out.println("Volume = " + sodaCan.getVolume());
-        System.out.println("Surface area = " + sodaCan.getSurfaceArea());
+        //SodaCan sodaCan = new SodaCan(10, 5);
+        //System.out.println("Volume = " + sodaCan.getVolume());
+        //System.out.println("Surface area = " + sodaCan.getSurfaceArea());
+
+        // Task 4.10
+        //Balloon balloon = new Balloon();
+        //balloon.addAir(100);
+        //System.out.println("Volume = " + balloon.getVolume());
+        //System.out.println("Surface area = " + balloon.getSurfaceArea());
+        //System.out.println("Radius = " + balloon.getRadius());
+        //balloon.addAir(100);
+        //System.out.println("Volume = " + balloon.getVolume());
+        //System.out.println("Surface area = " + balloon.getSurfaceArea());
+        //System.out.println("Radius = " + balloon.getRadius());
+
+        // Task 4.11
+
     }
 }
