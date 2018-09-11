@@ -41,6 +41,7 @@ public class CashRegister {
     public void enterPayment(int dollars, int quarters, int dimes, int nickels, int pennies) {
         payment = dollars + quarters * QUARTER_VALUE + dimes * DIME_VALUE +
                 nickels * NICKEL_VALUE + pennies * PENNY_VALUE;
+        change = payment - purchase;
     }
 
     /**
@@ -48,7 +49,6 @@ public class CashRegister {
      * @return the change due to the customer
      */
     public double giveChange() {
-        change = payment - purchase;
         purchase = 0;
         payment = 0;
         items = 0;
@@ -104,6 +104,10 @@ public class CashRegister {
         return items;
     }
 
+    /**
+     * Gives amount of dollars as change.
+     * @return change in dollars
+     */
     public int giveDollars() {
         int dollars = 0;
 
@@ -133,5 +137,65 @@ public class CashRegister {
         }
 
         return dollars;
+    }
+
+    /**
+     * Gives amount of quarters as change.
+     * @return change in quarters
+     */
+    public int giveQuarters() {
+        int quarters = 0;
+
+        while (change >= QUARTER_VALUE) {
+            quarters++;
+            change -= QUARTER_VALUE;
+        }
+
+        return quarters;
+    }
+
+    /**
+     * Gives amount of dimes as change.
+     * @return change in dimes
+     */
+    public int giveDimes() {
+        int dimes = 0;
+
+        while (change >= DIME_VALUE) {
+            dimes++;
+            change -= DIME_VALUE;
+        }
+
+        return dimes;
+    }
+
+    /**
+     * Gives amount of nickels as change.
+     * @return change in nickels
+     */
+    public int giveNickels() {
+        int nickels = 0;
+
+        while (change >= NICKEL_VALUE) {
+            nickels++;
+            change -= NICKEL_VALUE;
+        }
+
+        return nickels;
+    }
+
+    /**
+     * Gives amount of pennies as change.
+     * @return change in pennies
+     */
+    public int givePennies() {
+        int pennies = 0;
+
+        while (change >= PENNY_VALUE) {
+            pennies++;
+            change -= PENNY_VALUE;
+        }
+
+        return pennies;
     }
 }

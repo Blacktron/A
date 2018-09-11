@@ -96,6 +96,31 @@ public class Main {
         //System.out.println("Radius = " + balloon.getRadius());
 
         // Task 4.11
+        //CashRegister register = new CashRegister();
+        //register.recordPurchase(8.37);
+        //register.enterPayment(10, 0, 0, 0, 0);
+        //System.out.println("Dollars: " + register.giveDollars());
+        //System.out.println("Expected: 1");
+        //System.out.println("Quarters: " + register.giveQuarters());
+        //System.out.println("Expected: 2");
+        //System.out.println("Dimes: " + register.giveDimes());
+        //System.out.println("Expected: 1");
+        //System.out.println("Nickels: " + register.giveNickels());
+        //System.out.println("Expected: 0");
+        //System.out.println("Pennies: " + register.givePennies());
+        //System.out.println("Expected: 3");
+
+        // Task 4.12
+        //StampMachine machine = new StampMachine();
+        //machine.insert(1);
+        //System.out.print("First class stamps: ");
+        //System.out.println(machine.giveFirstClassStamps());
+        //System.out.println("Expected: 2");
+        //System.out.print("Penny stamps: ");
+        //System.out.println(machine.givePennyStamps());
+        //System.out.println("Expected: 12");
+
+        // Task 4.13
 
     }
 }
