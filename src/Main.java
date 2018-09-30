@@ -1,5 +1,4 @@
 import com.accenture.*;
-
 import java.util.Scanner;
 
 public class Main {
@@ -121,6 +120,27 @@ public class Main {
         //System.out.println("Expected: 12");
 
         // Task 4.13
+        //Scanner in = new Scanner(System.in);
+        //int numbers = in.nextInt();
+        //DigitExtractor digitExtractor = new DigitExtractor(numbers);
+        //System.out.println(digitExtractor.nextDigit());
+        //System.out.println(digitExtractor.nextDigit());
+        //System.out.println(digitExtractor.nextDigit());
+        //System.out.println(digitExtractor.nextDigit());
+        //System.out.println(digitExtractor.nextDigit());
 
+        // Task 4.14
+        //QuadraticEquation quadraticEquation = new QuadraticEquation(1, 3, -4);
+        //System.out.println("Solution A = " + quadraticEquation.getSolutionA());
+        //System.out.println("Solution B = " + quadraticEquation.getSolutionB());
+
+        // Task 4.15
+        TimeInterval timeInterval = new TimeInterval("0900", "1700");
+        timeInterval.getHours();
+        // to be continued
+
+        // Task 4.18
+        Month month = new Month(6);
+        System.out.println("Month name: " + month.getName());
     }
 }
