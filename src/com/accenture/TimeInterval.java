@@ -1,36 +1,54 @@
 package com.accenture;
 
 public class TimeInterval {
-    String firstTime;
-    String secondTime;
-    int timeA;
-    int timeB;
 
-    public TimeInterval(String firstTime, String secondTime) {
-        //this.timeA = convertTimeToInt(timeA);
-        //this.timeB = convertTimeToInt(timeB);
+    private final int firstTime;
+    private final int secondTime;
+    public final int HOURS_IN_DAY = 24;
+
+    /**
+     * Constructs a time interval.
+     *
+     * @param firstTime the first time in military time
+     * @param secondTime the second time in military time
+     */
+    public TimeInterval(int firstTime, int secondTime) {
         this.firstTime = firstTime;
         this.secondTime = secondTime;
     }
 
-    private int convertHoursToInt(String time) {
-        String hoursToConvert;
+    /**
+     * Returns the hours of the time difference.
+     *
+     * @return the hours
+     */
+    public int getHours() {
+        int hours;
+        if (firstTime > secondTime) {
 
-        if (time.substring(0, 1).equals("0")) {
-            hoursToConvert = time.substring(1, 2);
+            int firstHour = firstTime / 100;
+            int secondHour = secondTime / 100;
+            hours = ((secondHour - firstHour + HOURS_IN_DAY ) % HOURS_IN_DAY);
         } else {
-            hoursToConvert = time.substring(0, 2);
+            hours = (secondTime - firstTime) / 100;
         }
-
-        return Integer.parseInt(hoursToConvert);
+        return hours;
     }
 
-    public int getHours() {
-        int hoursA = convertHoursToInt(firstTime);
-        int hoursB = convertHoursToInt(secondTime);
-        int hours = Math.abs(hoursA - hoursB);
-        System.out.println(hours);
-
-        return hours;
+    /**
+     * Returns the minutes of the time difference.
+     *
+     * @return the minutes
+     */
+    public int getMinutes() {
+        int minutes = 0;
+        int firstTimeMinutes = firstTime % 100;
+        int secondTimeMinutes = secondTime % 100;
+        if (firstTime > secondTime) {
+            minutes = (firstTimeMinutes - secondTimeMinutes);
+        } else {
+            minutes = Math.abs(secondTimeMinutes - firstTimeMinutes);
+        }
+        return minutes;
     }
 }

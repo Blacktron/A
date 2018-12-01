@@ -135,12 +135,22 @@ public class Main {
         //System.out.println("Solution B = " + quadraticEquation.getSolutionB());
 
         // Task 4.15
-        TimeInterval timeInterval = new TimeInterval("0900", "1700");
-        timeInterval.getHours();
-        // to be continued
+        //Scanner in = new Scanner(System.in);
+        //System.out.print("Please enter the first time: ");
+        //int first = in.nextInt();
+        //System.out.print("Please enter the second time: ");
+        //int second = in.nextInt();
+
+        //TimeInterval interval = new TimeInterval(first, second);
+        //System.out.print("Difference: " + interval.getHours() + " hours " + interval.getMinutes() + " minutes");
 
         // Task 4.18
-        Month month = new Month(6);
-        System.out.println("Month name: " + month.getName());
+        //Month month = new Month(6);
+        //System.out.println("Month name: " + month.getName());
+
+        // Task 4.19
+        Easter easter = new Easter();
+        System.out.println("Easter day = " + easter.getEasterSundayDay(2001));
+        System.out.println("Easter month = " + easter.getEasterSundayMonth(2001));
     }
 }
